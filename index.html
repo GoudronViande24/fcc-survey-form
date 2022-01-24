@@ -17,7 +17,8 @@
 		<h1 id="title">Survey</h1>
 		<p id="description">Thank you very much for your help!</p>
 
-		<form action="" class="mt-5" id="survey-form">
+		<form class="mt-5" id="survey-form">
+
 			<div class="mb-3">
 				<label for="name" class="form-label" id="name-label">Name</label>
 				<input type="text" name="name" id="name" class="form-control" placeholder="John Doe" required>
@@ -30,10 +31,62 @@
 
 			<div class="mb-3">
 				<label for="number" class="form-label" id="number-label">Age</label>
-				<input type="number" name="number" id="number" class="form-control" placeholder="21"
+				<input type="number" min="0" max="99" name="number" id="number" class="form-control" placeholder="21"
 					aria-describedby="numberHelp">
 				<div id="numberHelp" class="form-text text-light">Optional</div>
 			</div>
+
+			<div class="mb-3">
+				<label for="dropdown" class="form-label" id="dropdown-label">City</label>
+				<select name="dropdown" id="dropdown" class="form-select">
+					<option disabled selected value>Select an option...</option>
+					<option value="montreal">Montreal</option>
+					<option value="montreal">Quebec</option>
+					<option value="vancouver">Vancouver</option>
+					<option value="ottawa">Ottawa</option>
+				</select>
+			</div>
+
+			<div class="mb-3">
+				<label for="gender" class="form-label" id="gender-label">Gender</label>
+				<div>
+					<input class="btn-check" type="radio" name="gender" id="gender-male" value="male" autocomplete="off">
+					<label for="gender-male" class="btn btn-secondary">Male</label>
+
+					<input class="btn-check" type="radio" name="gender" id="gender-female" value="female" autocomplete="off">
+					<label for="gender-female" class="btn btn-secondary">Female</label>
+
+					<input class="btn-check" type="radio" name="gender" id="gender-other" value="other" autocomplete="off">
+					<label for="gender-other" class="btn btn-secondary">Other</label>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label" id="skills-label">Skills</label>
+				<div>
+					<input class="btn-check" type="checkbox" name="skill-html" id="skill-html" value="html" autocomplete="off">
+					<label for="skill-html" class="btn btn-secondary">HTML</label>
+
+					<input class="btn-check" type="checkbox" name="skill-css" id="skill-css" value="css" autocomplete="off">
+					<label for="skill-css" class="btn btn-secondary">CSS</label>
+
+					<input class="btn-check" type="checkbox" name="skill-js" id="skill-js" value="js" autocomplete="off">
+					<label for="skill-js" class="btn btn-secondary">JavaScript</label>
+
+					<input class="btn-check" type="checkbox" name="skill-php" id="skill-php" value="php" autocomplete="off">
+					<label for="skill-php" class="btn btn-secondary">PHP</label>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label for="comments">Comments</label>
+				<textarea required class="form-control" name="comments" id="comments" rows="5" placeholder="Enter additional comments here..."></textarea>
+			</div>
+
+			<div class="mb-3">
+				<button type="submit" id="submit" class="btn btn-outline-light">Submit</button>
+			</div>
+
 		</form>
 	</div>
 
